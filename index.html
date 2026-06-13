@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishanth Sivanandam | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --slate-900: #0f172a;
+            --slate-800: #1e293b;
+            --slate-700: #334155;
+            --slate-600: #475569;
+            --slate-100: #f1f5f9;
+            --white: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--slate-700);
+            background-color: var(--white);
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
+        header {
+            padding: 4rem 0 2rem;
+            border-bottom: 1px solid var(--slate-100);
+        }
+        h1 { color: var(--slate-900); font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .subtitle { font-size: 1.25rem; color: var(--primary); font-weight: 500; margin-bottom: 1.5rem; }
+        .about-text { font-size: 1.1rem; color: var(--slate-600); max-width: 750px; }
+        
+        section { padding: 3rem 0; border-bottom: 1px solid var(--slate-100); }
+        h2 { color: var(--slate-900); font-size: 1.75rem; margin-bottom: 2rem; display: flex; align-items: center; }
+        h2::after { content: ""; flex: 1; height: 1px; background: var(--slate-100); margin-left: 1.5rem; }
+
+        .skills-grid { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+        .skill-tag {
+            background: var(--slate-100);
+            color: var(--slate-800);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .experience-item { margin-bottom: 3rem; position: relative; }
+        .exp-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; flex-wrap: wrap; }
+        .exp-company { font-size: 1.2rem; font-weight: 700; color: var(--slate-900); }
+        .exp-location-date { font-size: 0.9rem; color: var(--slate-600); }
+        .exp-role { font-weight: 600; color: var(--primary); margin-bottom: 1rem; display: block; }
+        .exp-list { list-style: none; }
+        .exp-list li { margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative; }
+        .exp-list li::before { content: "→"; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
+
+        .pub-card {
+            background: var(--slate-100);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+        .pub-title { font-weight: 700; color: var(--slate-900); display: block; margin-bottom: 0.5rem; }
+        .pub-doi { font-size: 0.85rem; color: var(--primary); text-decoration: none; word-break: break-all; }
+
+        .social-links { display: flex; gap: 1.5rem; margin-top: 2rem; }
+        .social-link {
+            color: var(--slate-700);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.2s;
+        }
+        .social-link:hover { color: var(--primary); }
+
+        @media (max-width: 640px) {
+            .exp-header { flex-direction: column; }
+            h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Nishanth Sivanandam 👋</h1>
+            <p class="subtitle">Machine Learning Scientist | Edge AI & Safety-Critical Vision Systems</p>
+            <p class="about-text">
+                A research-driven Machine Learning Scientist with a 10-year record designing, optimizing, and deploying intelligent systems. 
+                Specializing in Computer Vision and Vision-Language Models (VLMs) with a focus on systematic failure analysis and robust ML development.
+            </p>
+            <div class="social-links">
+                <a href="https://github.com/snishanth512" class="social-link">GitHub</a>
+                <a href="https://www.linkedin.com/in/nishanth-sivanandam/" class="social-link">LinkedIn</a>
+                <a href="mailto:snishanth512@gmail.com" class="social-link">Email</a>
+            </div>
+        </header>
+
+        <section id="skills">
+            <h2>Skills & Technologies</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">Vision-Language Models</span>
+                <span class="skill-tag">Computer Vision</span>
+                <span class="skill-tag">PyTorch</span>
+                <span class="skill-tag">TensorFlow</span>
+                <span class="skill-tag">Scikit-Learn</span>
+                <span class="skill-tag">OpenCV</span>
+                <span class="skill-tag">NumPy</span>
+                <span class="skill-tag">Model Quantization</span>
+                <span class="skill-tag">Edge AI</span>
+                <span class="skill-tag">Agile/Scrum</span>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <span class="exp-company">Lytx</span>
+                    <span class="exp-location-date">Bengaluru, India | July 2022 – Present</span>
+                </div>
+                <span class="exp-role">Machine Learning Scientist (Hybrid)</span>
+                <ul class="exp-list">
+                    <li>Designed end-to-end driver behavior detection system using VLMs and LLMs, achieving 90% zero-shot precision.</li>
+                    <li>Developed a novel confidence score generation method to isolate open-world drift, reducing annotation overhead significantly.</li>
+                    <li>Implemented edge inference services for camera lens obstruction detection, improving dirt-on-lens classification by 20%.</li>
+                    <li>Optimized video de-identification pipelines on NVIDIA GPUs via GStreamer, increasing inference speed by 2x.</li>
+                    <li>Deployed passenger counting models achieving 90% accuracy across 5,000+ active client vehicles.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <span class="exp-company">RiRo Technologies</span>
+                    <span class="exp-location-date">Hyderabad, India | Oct 2018 – Sept 2020</span>
+                </div>
+                <span class="exp-role">Senior Software Engineer</span>
+                <ul class="exp-list">
+                    <li>Developed core microcontroller firmware on STM32L0 platforms and Raspberry Pi gateway software.</li>
+                    <li>Ported LoRaWAN communication stacks to custom proprietary hardware platforms.</li>
+                    <li>Created LoRa packet encoder/decoder utilities for cloud server ingestion and sensor metrics streaming.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <span class="exp-company">Altiux Innovation Pvt. Ltd.</span>
+                    <span class="exp-location-date">Bangalore, India | Sept 2014 – Oct 2018</span>
+                </div>
+                <span class="exp-role">Senior Software Engineer</span>
+                <ul class="exp-list">
+                    <li>Engineered Linux Hardware Abstraction Layers (HAL) for industrial gateways supporting WiSUN, Zigbee, and RF protocols.</li>
+                    <li>Authored Linux kernel character drivers for I2C bus communications on Samsung IoT boards.</li>
+                    <li>Architected smart street lighting applications using Contiki OS and IEEE 802.15.4 mesh devices.</li>
+                    <li>Stabilized complex cross-compilation toolchains for multiple ARM and Intel platforms.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Publications</h2>
+            <div class="pub-card">
+                <span class="pub-title">Intrusion Detection System for Bluetooth Mesh Networks using Machine Learning</span>
+                <p style="margin-bottom: 0.5rem; font-size: 0.9rem;">2022 International Conference on Industry 4.0 Technology (I4Tech), Pune, India</p>
+                <a href="https://doi.org/10.1109/I4Tech55392.2022.9952758" class="pub-doi">DOI: 10.1109/I4Tech55392.2022.9952758</a>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>GitHub Projects</h2>
+            <div class="experience-item">
+                <div class="exp-header">
+                    <a href="https://github.com/snishanth512/ids_bm" style="text-decoration: none; color: var(--slate-900); font-weight: 700;">ids_bm</a>
+                </div>
+                <p>Implementation code for the paper "Intrusion Detection System for Bluetooth Mesh Networks using Machine Learning". Focuses on supervised ML classifiers for IoT security.</p>
+            </div>
+        </section>
+
+        <footer style="padding: 4rem 0; text-align: center; color: var(--slate-600); font-size: 0.9rem;">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> Nishanth Sivanandam. Built for GitHub Pages.</p>
+        </footer>
+    </div>
+</body>
+</html>
