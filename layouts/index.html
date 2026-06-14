@@ -31,7 +31,6 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#projects">Projects</a></li>
             </ul>
@@ -155,26 +154,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Skills Section -->
-        <section class="section-block" id="skills">
-            <div class="container">
-                <h2 class="section-title">Technical Skills</h2>
-                <div class="skills-container">
-                    {{ range .Site.Params.skills_categories }}
-                    <div class="skill-category">
-                        <h3 class="skill-category-title">{{ .title }}</h3>
-                        <div class="skill-list">
-                            {{ range .badges }}
-                            <span class="skill-badge">{{ . }}</span>
-                            {{ end }}
-                        </div>
-                    </div>
-                    {{ end }}
-                </div>
-            </div>
-        </section>
-
         <!-- Publications Section -->
         <section class="section-block" id="publications">
             <div class="container">
