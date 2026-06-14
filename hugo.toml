@@ -88,7 +88,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT", "page", "sect
     date = "October 2013"
     school = "Amrita University, Coimbatore"
     details = [
-      "Project: PPG Heart Beat Counter ([Link](https://drive.google.com/file/d/1msrMn6GgOwcqodkNzCSM24xLxQVLWSqs/view?usp=sharing)) - Designed and implemented an infrared sensor-based heart beat counter and wave visualizer with dedicated GLCD waveform rendering."
+      "Thesis: [PPG Heart Beat Counter](https://drive.google.com/file/d/1msrMn6GgOwcqodkNzCSM24xLxQVLWSqs/view?usp=sharing) - Designed and implemented an infrared sensor-based heart beat counter and wave visualizer with dedicated GLCD waveform rendering."
     ]
 
   [[params.skills_categories]]
@@ -147,7 +147,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT", "page", "sect
     tags = ["Machine Learning", "IoT Security", "Bluetooth Mesh", "Python"]
 
   [[params.projects]]
-    title = "PPG Heart Beat Counter"
+    title = "B.Tech Thesis: PPG Heart Beat Counter"
     url = "https://drive.google.com/file/d/1msrMn6GgOwcqodkNzCSM24xLxQVLWSqs/view?usp=sharing"
     desc = "Designed and implemented a microcontroller-based photoplethysmogram (PPG) heart beat counter. Developed an analog signal conditioning circuit to filter and amplify low-amplitude infrared sensor signals, programmed peak-detection sampling firmware, and displayed real-time waveforms on a GLCD."
     tags = ["Embedded Systems", "Signal Conditioning", "Microcontrollers", "GLCD", "Firmware"]
