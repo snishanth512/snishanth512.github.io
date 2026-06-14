@@ -5,6 +5,11 @@ title = "Nishanth Sivanandam | Machine Learning & Edge AI Scientist"
 # Disable default pages/taxonomies since we are doing a single page layout
 disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT", "page", "section"]
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [params]
   name = "Nishanth Sivanandam"
   subtitle = "Machine Learning Scientist | Edge AI & Computer Vision Systems"
@@ -83,7 +88,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT", "page", "sect
     date = "August 2014"
     school = "CDAC, Bangalore"
     details = [
-      "Project: [Micro-C/OS-II RTOS Porting](https://drive.google.com/file/d/1GwS9X0xhXVZJGDXLsECVZ_HekYJBOB5V/view?usp=sharing) - Ported the Micro-C/OS-II kernel onto an ARM Cortex-M4 based Tiva C microcontroller, developing BSP drivers for UART, GPIOs, and sensors to schedule real-time tasks."
+      "Project: <a href='https://drive.google.com/file/d/1GwS9X0xhXVZJGDXLsECVZ_HekYJBOB5V/view?usp=sharing' target='_blank' rel='noopener noreferrer'>Micro-C/OS-II RTOS Porting <svg viewBox='0 0 24 24' width='11' height='11' stroke='currentColor' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round' style='display: inline-block; vertical-align: middle; margin-left: 2px;'><path d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'></path><polyline points='15 3 21 3 21 9'></polyline><line x1='10' y1='14' x2='21' y2='3'></line></svg></a> - Ported the Micro-C/OS-II kernel onto an ARM Cortex-M4 based Tiva C microcontroller, developing BSP drivers for UART, GPIOs, and sensors to schedule real-time tasks."
     ]
 
   [[params.education]]
@@ -91,7 +96,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT", "page", "sect
     date = "October 2013"
     school = "Amrita University, Coimbatore"
     details = [
-      "Thesis: [PPG Heart Beat Counter](https://drive.google.com/file/d/1msrMn6GgOwcqodkNzCSM24xLxQVLWSqs/view?usp=sharing) - Designed and implemented an infrared sensor-based heart beat counter and wave visualizer with dedicated GLCD waveform rendering."
+      "Thesis: <a href='https://drive.google.com/file/d/1msrMn6GgOwcqodkNzCSM24xLxQVLWSqs/view?usp=sharing' target='_blank' rel='noopener noreferrer'>PPG Heart Beat Counter <svg viewBox='0 0 24 24' width='11' height='11' stroke='currentColor' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round' style='display: inline-block; vertical-align: middle; margin-left: 2px;'><path d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'></path><polyline points='15 3 21 3 21 9'></polyline><line x1='10' y1='14' x2='21' y2='3'></line></svg></a> - Designed and implemented an infrared sensor-based heart beat counter and wave visualizer with dedicated GLCD waveform rendering."
     ]
 
   [[params.skills_categories]]
