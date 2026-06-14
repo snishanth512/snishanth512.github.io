@@ -8,7 +8,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT", "page", "sect
 [params]
   name = "Nishanth Sivanandam"
   subtitle = "Machine Learning Scientist | Edge AI & Safety-Critical Vision Systems"
-  about = "A research-driven Machine Learning Scientist with a 10-year track record designing, optimizing, and deploying intelligent systems. Specializing in Computer Vision and Vision-Language Models (VLMs) with a core focus on systematic failure analysis, edge model deployment, and robust ML engineering."
+  about = "A research-driven Machine Learning Scientist with a 10-year record of designing, optimizing, and deploying intelligent systems — combining 6 years of low-level embedded firmware engineering with nearly 4 years of production-scale ML research. Specializes in implementing Computer Vision and Vision-Language Model (VLM) systems, with a focus on systematic failure analysis, end-to-end ML system development, and safety-critical AI products."
   
   [params.contact]
     email = "snishanth512@gmail.com"
