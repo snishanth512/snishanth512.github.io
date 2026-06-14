@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title }}</title>
+    <meta name="description" content="{{ .Site.Params.subtitle }}">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{ "styles.css" | relURL }}">
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <button class="menu-toggle" id="menu-toggle-btn" aria-label="Toggle Menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <a href="#" class="nav-name">{{ .Site.Params.name }}</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero / About Section -->
+        <section class="profile-hero" id="about">
+            <div class="container hero-grid">
+                <div>
+                    <h1 class="hero-title">{{ .Site.Params.name }}</h1>
+                    <p class="hero-subtitle">{{ .Site.Params.subtitle }}</p>
+                    <p class="hero-about">{{ .Site.Params.about }}</p>
+                </div>
+                
+                <!-- Contact info & social links -->
+                <div class="contact-info">
+                    {{ with .Site.Params.contact.email }}
+                    <a href="mailto:{{ . }}" class="contact-item" id="contact-email">
+                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        {{ . }}
+                    </a>
+                    {{ end }}
+                    {{ with .Site.Params.contact.linkedin }}
+                    <a href="{{ . }}" class="contact-item" target="_blank" rel="noopener noreferrer" id="contact-linkedin">
+                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                        LinkedIn
+                    </a>
+                    {{ end }}
+                    {{ with .Site.Params.contact.github }}
+                    <a href="{{ . }}" class="contact-item" target="_blank" rel="noopener noreferrer" id="contact-github">
+                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        GitHub
+                    </a>
+                    {{ end }}
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience Section -->
+        <section class="section-block" id="experience">
+            <div class="container">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="timeline">
+                    {{ range .Site.Params.experience }}
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="experience-header">
+                            <span class="experience-company">{{ .company }}</span>
+                            <span class="experience-date">{{ if .location }}{{ .location }} | {{ end }}{{ .date }}</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; margin-bottom: 0.75rem;">
+                            {{ range $index, $role := .roles }}
+                            <span class="experience-role" style="{{ if gt $index 0 }}margin-bottom: 0;{{ else }}margin-bottom: 0.15rem;{{ end }}">
+                                {{ .name }}
+                                {{ if .duration }}
+                                <span style="font-weight: normal; color: var(--text-secondary); font-size: 0.85rem; margin-left: 0.25rem;">({{ .duration }})</span>
+                                {{ end }}
+                            </span>
+                            {{ end }}
+                        </div>
+                        <ul class="experience-bullets">
+                            {{ range .bullets }}
+                            <li>{{ . | markdownify }}</li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section-block" id="education">
+            <div class="container">
+                <h2 class="section-title">Education</h2>
+                <div class="education-grid">
+                    {{ range .Site.Params.education }}
+                    <div class="education-item">
+                        <div class="education-header">
+                            <span class="education-degree">{{ .degree }}</span>
+                            <span class="education-date">{{ .date }}</span>
+                        </div>
+                        <span class="education-school">{{ .school }}</span>
+                        {{ if .details }}
+                        <ul class="education-details">
+                            {{ range .details }}
+                            <li>{{ . | markdownify }}</li>
+                            {{ end }}
+                        </ul>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section-block" id="skills">
+            <div class="container">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-container">
+                    {{ range .Site.Params.skills_categories }}
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">{{ .title }}</h3>
+                        <div class="skill-list">
+                            {{ range .badges }}
+                            <span class="skill-badge">{{ . }}</span>
+                            {{ end }}
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section class="section-block" id="publications">
+            <div class="container">
+                <h2 class="section-title">Publications</h2>
+                <div class="pub-list">
+                    {{ range .Site.Params.publications }}
+                    <div class="pub-item">
+                        <h3 class="pub-item-title">{{ .title }}</h3>
+                        <p class="pub-details">{{ .details | markdownify }}</p>
+                        {{ if .doi }}
+                        <a href="https://doi.org/{{ .doi }}" target="_blank" rel="noopener noreferrer" class="pub-link" id="pub-link-{{ anchorize .title }}">
+                            DOI: {{ .doi }}
+                            <svg viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </section>
+
+        <!-- Selected Projects Section -->
+        <section class="section-block" id="projects">
+            <div class="container">
+                <h2 class="section-title">Selected Projects</h2>
+                <div class="projects-grid">
+                    {{ range .Site.Params.projects }}
+                    <div class="project-card">
+                        <a href="{{ .url }}" class="project-title-link" target="_blank" rel="noopener noreferrer" id="proj-{{ anchorize .title }}">
+                            {{ .title }}
+                            {{ if .status }}
+                            <span style="font-size: 0.8rem; font-weight: normal; color: var(--accent); background: var(--accent-light); padding: 0.15rem 0.4rem; border-radius: 4px; margin-left: 0.5rem;">{{ .status }}</span>
+                            {{ end }}
+                            <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                        <p class="project-desc">{{ .desc }}</p>
+                        <div class="project-tags">
+                            {{ range .tags }}
+                            <span class="project-tag">{{ . }}</span>
+                            {{ end }}
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> {{ .Site.Params.name }}. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        const menuToggleBtn = document.getElementById('menu-toggle-btn');
+        const navMenu = document.getElementById('nav-menu');
+        const siteHeader = document.querySelector('.site-header');
+        const heroTitle = document.querySelector('.hero-title');
+
+        // Toggle menu on click
+        menuToggleBtn.addEventListener('click', (e) => {
+            navMenu.classList.toggle('active');
+            e.stopPropagation();
+        });
+
+        // Close menu when clicking a link
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && e.target !== menuToggleBtn && !menuToggleBtn.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        // Observer to display sticky header only when hero name is hidden by scrolling
+        const headerObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    siteHeader.classList.remove('visible');
+                    navMenu.classList.remove('active');
+                } else {
+                    siteHeader.classList.add('visible');
+                }
+            });
+        }, {
+            rootMargin: '-56px 0px 0px 0px',
+            threshold: 0
+        });
+
+        if (heroTitle) {
+            headerObserver.observe(heroTitle);
+        }
+    </script>
+</body>
+</html>

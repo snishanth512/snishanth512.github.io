@@ -1,0 +1,145 @@
+baseURL = 'https://snishanth512.github.io/'
+languageCode = 'en-us'
+title = "Nishanth Sivanandam | Machine Learning & Edge AI Scientist"
+theme = ""
+
+# Disable default pages/taxonomies since we are doing a single page layout
+disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT", "page", "section"]
+
+[params]
+  name = "Nishanth Sivanandam"
+  subtitle = "Machine Learning Scientist | Edge AI & Safety-Critical Vision Systems"
+  about = "A research-driven Machine Learning Scientist with a 10-year track record designing, optimizing, and deploying intelligent systems. Specializing in Computer Vision and Vision-Language Models (VLMs) with a core focus on systematic failure analysis, edge model deployment, and robust ML engineering."
+  
+  [params.contact]
+    email = "snishanth512@gmail.com"
+    linkedin = "https://www.linkedin.com/in/nishanth-sivanandam/"
+    github = "https://github.com/snishanth512"
+
+  [[params.experience]]
+    company = "Lytx"
+    location = "Bengaluru, India"
+    date = "July 2022 – Present"
+    roles = [
+      { name = "Machine Learning Scientist", duration = "Aug 2025 – Present" },
+      { name = "Machine Learning Engineer", duration = "Jul 2022 – Jul 2025" }
+    ]
+    bullets = [
+      "Designed end-to-end driver behavior detection systems using VLMs and LLMs, achieving 90% zero-shot precision.",
+      "Developed a novel confidence score generation method to isolate open-world drift, reducing manual annotation overhead significantly.",
+      "Implemented edge inference services for camera lens obstruction detection, improving dirt-on-lens classification metrics by 20%.",
+      "Optimized video de-identification pipelines on NVIDIA GPUs via GStreamer, yielding a 2x increase in inference speed.",
+      "Deployed passenger counting models achieving 90% accuracy across 5,000+ active client vehicles."
+    ]
+
+  [[params.experience]]
+    company = "DryvAmigo"
+    date = "Oct 2021 – Jun 2022"
+    roles = [
+      { name = "Machine Learning Intern" }
+    ]
+    bullets = [
+      "Assisted in computer vision model prototyping and dataset preprocessing pipelines for smart vehicle safety alerts."
+    ]
+
+  [[params.experience]]
+    company = "RiRo Technologies"
+    location = "Hyderabad, India"
+    date = "Oct 2018 – Sept 2020"
+    roles = [
+      { name = "Senior Software Engineer" }
+    ]
+    bullets = [
+      "Developed core microcontroller firmware on STM32L0 platforms and Raspberry Pi gateway software.",
+      "Ported LoRaWAN communication stacks to custom proprietary hardware platforms.",
+      "Created LoRa packet encoder/decoder utilities for cloud server ingestion and sensor metrics streaming."
+    ]
+
+  [[params.experience]]
+    company = "Altiux Innovation Pvt. Ltd."
+    location = "Bangalore, India"
+    date = "Sept 2014 – Oct 2018"
+    roles = [
+      { name = "Senior Software Engineer" }
+    ]
+    bullets = [
+      "Engineered Linux Hardware Abstraction Layers (HAL) for industrial gateways supporting WiSUN, Zigbee, and RF protocols.",
+      "Authored Linux kernel character drivers for I2C bus communications on Samsung IoT boards.",
+      "Architected smart street lighting applications using Contiki OS and IEEE 802.15.4 mesh devices.",
+      "Stabilized complex cross-compilation toolchains for multiple ARM and Intel platforms."
+    ]
+
+  [[params.education]]
+    degree = "M.Tech. in Industrial Intelligent Systems"
+    date = "Graduated: July 2022"
+    school = "Amrita University, Coimbatore"
+    details = [
+      "Performance: 9.16/10.0 CGPA (Gold Medalist).",
+      "Distinction: Graduated as Gold Medalist, demonstrating consistent top-tier performance in Machine Learning and IoT systems.",
+      "Research: Authored and presented a peer-reviewed paper on ML-based Intrusion Detection for Bluetooth Mesh Networks at the IEEE I4Tech International Conference."
+    ]
+
+  [[params.education]]
+    degree = "PG Diploma in Embedded System Design"
+    date = "2014"
+    school = "CDAC, Bangalore"
+
+  [[params.education]]
+    degree = "B.Tech. in Electronics & Communication Engineering"
+    date = "2013"
+    school = "Amrita University, Coimbatore"
+
+  [[params.skills_categories]]
+    title = "Machine Learning & Computer Vision"
+    badges = [
+      "Vision-Language Models",
+      "Computer Vision",
+      "Deep Learning",
+      "Model Quantization",
+      "PyTorch",
+      "TensorFlow",
+      "Scikit-Learn"
+    ]
+
+  [[params.skills_categories]]
+    title = "Embedded & Edge Systems"
+    badges = [
+      "Edge AI",
+      "STM32 Microcontrollers",
+      "Linux Kernel Drivers",
+      "HAL Development",
+      "LoRaWAN / IoT Protocols",
+      "Contiki OS & RTOS"
+    ]
+
+  [[params.skills_categories]]
+    title = "Libraries & Engineering"
+    badges = [
+      "OpenCV",
+      "NumPy",
+      "GStreamer",
+      "NVIDIA GPU Optimization",
+      "Cross-Compilation",
+      "Docker",
+      "Kubernetes",
+      "CI/CD Pipelines",
+      "Agile/Scrum"
+    ]
+
+  [[params.publications]]
+    title = "Intrusion Detection System for Bluetooth Mesh Networks using Machine Learning"
+    details = "Published in: 2022 International Conference on Industry 4.0 Technology (I4Tech) | Pune, India"
+    doi = "10.1109/I4Tech55392.2022.9952758"
+
+  [[params.projects]]
+    title = "edge-image-embed"
+    url = "https://github.com/snishanth512/edge-image-embed"
+    status = "Ongoing"
+    desc = "An optimized, structured toolkit for generating image embeddings on resource-constrained edge hardware. Features modular pipelines for model fine-tuning (Hugging Face), lightweight runtime inference registries (MobileNetV3), performance evaluation benchmarking, and target deployment conversions (ARM, OpenVINO, Docker)."
+    tags = ["Edge AI", "Computer Vision", "PyTorch", "Docker", "OpenVINO"]
+
+  [[params.projects]]
+    title = "ids_bm"
+    url = "https://github.com/snishanth512/ids_bm"
+    desc = "Official implementation code for the paper \"Intrusion Detection System for Bluetooth Mesh Networks using Machine Learning\". Features supervised machine learning classifiers optimized for IoT-based intrusion detection security."
+    tags = ["Machine Learning", "IoT Security", "Bluetooth Mesh", "Python"]
