@@ -39,13 +39,23 @@ body {
 
 /* Sticky Header & Nav */
 header.site-header {
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
     z-index: 100;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    pointer-events: none; /* Prevent interaction when hidden */
+}
+
+header.site-header.visible {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto; /* Enable interaction when visible */
 }
 
 header.site-header .nav-container {

@@ -246,6 +246,8 @@
 
         const menuToggleBtn = document.getElementById('menu-toggle-btn');
         const navMenu = document.getElementById('nav-menu');
+        const siteHeader = document.querySelector('.site-header');
+        const heroTitle = document.querySelector('.hero-title');
 
         // Toggle menu on click
         menuToggleBtn.addEventListener('click', (e) => {
@@ -266,6 +268,25 @@
                 navMenu.classList.remove('active');
             }
         });
+
+        // Observer to display sticky header only when hero name is hidden by scrolling
+        const headerObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    siteHeader.classList.remove('visible');
+                    navMenu.classList.remove('active');
+                } else {
+                    siteHeader.classList.add('visible');
+                }
+            });
+        }, {
+            rootMargin: '-56px 0px 0px 0px',
+            threshold: 0
+        });
+
+        if (heroTitle) {
+            headerObserver.observe(heroTitle);
+        }
     </script>
 </body>
 </html>
