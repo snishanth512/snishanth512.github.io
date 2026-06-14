@@ -80,12 +80,12 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT", "page", "sect
 
   [[params.education]]
     degree = "PG Diploma in Embedded System Design"
-    date = "2014"
+    date = "August 2014"
     school = "CDAC, Bangalore"
 
   [[params.education]]
     degree = "B.Tech. in Electronics & Communication Engineering"
-    date = "2013"
+    date = "October 2013"
     school = "Amrita University, Coimbatore"
 
   [[params.skills_categories]]
