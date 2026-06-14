@@ -70,7 +70,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT", "page", "sect
 
   [[params.education]]
     degree = "M.Tech. in Industrial Intelligent Systems"
-    date = "Graduated: July 2022"
+    date = "July 2022"
     school = "Amrita University, Coimbatore"
     details = [
       "Performance: 9.16/10.0 CGPA (Gold Medalist).",
