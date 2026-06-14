@@ -1,7 +1,6 @@
 baseURL = 'https://snishanth512.github.io/'
 languageCode = 'en-us'
 title = "Nishanth Sivanandam | Machine Learning & Edge AI Scientist"
-theme = ""
 
 # Disable default pages/taxonomies since we are doing a single page layout
 disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT", "page", "section"]
