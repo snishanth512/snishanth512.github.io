@@ -566,6 +566,32 @@ footer.site-footer {
     border-top: 1px solid var(--border);
 }
 
+/* Scroll Progress Bar */
+.scroll-progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: transparent;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.scroll-progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: var(--accent);
+    transition: width 0.05s linear;
+}
+
+/* Active Navigation Link */
+.nav-menu li a.active {
+    color: var(--accent) !important;
+    background-color: var(--bg-secondary) !important;
+    font-weight: 700;
+}
+
 /* Print Optimization Media Query */
 @media print {
     /* Set page margins */
