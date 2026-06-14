@@ -78,6 +78,22 @@
                     </a>
                     {{ end }}
                 </div>
+
+                <!-- Hero Skill Dashboard -->
+                {{ if .Site.Params.skills_categories }}
+                <div class="hero-skills-dashboard">
+                    {{ range .Site.Params.skills_categories }}
+                    <div class="hero-skill-group">
+                        <span class="hero-skill-group-label">{{ .title }}</span>
+                        <div class="hero-skill-pills">
+                            {{ range .badges }}
+                            <span class="hero-skill-pill">{{ . }}</span>
+                            {{ end }}
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+                {{ end }}
             </div>
         </section>
 
