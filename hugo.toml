@@ -8,7 +8,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT", "page", "sect
 [params]
   name = "Nishanth Sivanandam"
   subtitle = "Machine Learning Scientist | Edge AI & Safety-Critical Vision Systems"
-  about = "A research-driven Machine Learning Scientist with a 10-year record of designing, optimizing, and deploying intelligent systems. Brings 6 years of low-level embedded firmware engineering and nearly 4 years of production-scale ML research. Specializes in implementing Computer Vision and Vision-Language Model (VLM) systems, with a focus on systematic failure analysis, end-to-end ML system development, and safety-critical AI products."
+  about = "Machine Learning Scientist specializing in Computer Vision and Vision-Language Model (VLM) systems for safety-critical AI applications. Grounded in 6 years of low-level embedded firmware engineering followed by nearly 4 years of applied ML research at production scale. Core focus areas: systematic failure analysis, end-to-end ML system development, and robust model deployment on constrained hardware."
   
   [params.contact]
     email = "snishanth512@gmail.com"
@@ -24,7 +24,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT", "page", "sect
     ]
     bullets = [
       "Designed end-to-end driver behavior detection systems using VLMs and LLMs, achieving 90% zero-shot precision.",
-      "Developed a novel confidence score generation method to isolate open-world drift, reducing manual annotation overhead significantly.",
+      "Developed a confidence score generation method to isolate open-world distribution drift, substantially reducing manual annotation overhead through targeted data selection.",
       "Implemented edge inference services for camera lens obstruction detection, improving dirt-on-lens classification metrics by 20%.",
       "Optimized video de-identification pipelines on NVIDIA GPUs via GStreamer, yielding a 2x increase in inference speed.",
       "Deployed passenger counting models achieving 90% accuracy across 5,000+ active client vehicles."
@@ -37,7 +37,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT", "page", "sect
       { name = "Machine Learning Intern" }
     ]
     bullets = [
-      "Assisted in computer vision model prototyping and dataset preprocessing pipelines for smart vehicle safety alerts."
+      "Contributed to computer vision model prototyping and dataset preprocessing pipelines for smart vehicle safety alert systems."
     ]
 
   [[params.experience]]
@@ -73,7 +73,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT", "page", "sect
     school = "Amrita University, Coimbatore"
     details = [
       "Performance: 9.16/10.0 CGPA (Gold Medalist).",
-      "Distinction: Graduated as Gold Medalist, demonstrating consistent top-tier performance in Machine Learning and IoT systems.",
+      "Distinction: Graduated as Gold Medalist with 9.16/10.0 CGPA, ranking first in the Machine Learning and IoT systems program.",
       "Research: Authored and presented a peer-reviewed paper on ML-based Intrusion Detection for Bluetooth Mesh Networks at the IEEE I4Tech International Conference."
     ]
 
