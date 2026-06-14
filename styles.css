@@ -24,7 +24,7 @@ html {
 
 body {
     font-family: var(--font-sans);
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -169,6 +169,7 @@ header.site-header .nav-container {
     color: var(--text-secondary);
     max-width: 700px;
     margin-top: 0.5rem;
+    text-align: justify;
 }
 
 /* Contact Info Badge Bar */
@@ -286,6 +287,7 @@ section.section-block:last-of-type {
     margin-bottom: 0.5rem;
     color: var(--text-secondary);
     font-size: 0.95rem;
+    text-align: justify;
 }
 
 /* Skills Layout */
@@ -420,6 +422,7 @@ section.section-block:last-of-type {
     color: var(--text-secondary);
     font-size: 0.925rem;
     margin: 0.5rem 0 0.75rem 0;
+    text-align: justify;
 }
 
 .project-tags {
