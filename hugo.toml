@@ -32,6 +32,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT", "page", "sect
 
   [[params.experience]]
     company = "DryvAmigo"
+    location = "Bengaluru, India"
     date = "Oct 2021 – Jun 2022"
     roles = [
       { name = "Machine Learning Intern" }
