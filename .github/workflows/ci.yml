@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  lint:
+  lint-markdown:
     name: Markdown Lint
     runs-on: ubuntu-latest
     steps:
@@ -17,7 +17,17 @@ jobs:
         with:
           globs: "**/*.md"
 
-  links:
+  lint-html:
+    name: HTML Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate HTML
+        uses: htmlhint/htmlhint-action@v2
+        with:
+          addresses: 'index.html'
+
+  check-links:
     name: Link Checker
     runs-on: ubuntu-latest
     steps:
@@ -25,4 +35,4 @@ jobs:
       - name: Check Links
         uses: lycheeverse/lychee-action@v1.9.0
         with:
-          args: --verbose --no-progress "**/*.md"
+          args: --verbose --no-progress "**/*.md" "**/*.html"
