@@ -8,7 +8,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT", "page", "sect
 [params]
   name = "Nishanth Sivanandam"
   subtitle = "Machine Learning Scientist | Edge AI & Safety-Critical Vision Systems"
-  about = "Machine Learning Scientist specializing in Computer Vision and Vision-Language Model (VLM) systems for safety-critical AI applications. Grounded in 6 years of low-level embedded firmware engineering followed by nearly 4 years of applied ML research at production scale. Core focus areas: systematic failure analysis, end-to-end ML system development, and robust model deployment on constrained hardware."
+  about = "Machine Learning Scientist with a background spanning embedded systems and production AI, converting research insights into enterprise-grade features at fleet scale. At Lytx, led end-to-end development of VLM and LLM-based driver behavior detection systems, achieving 90% zero-shot precision, automating over 500K manual annotation events, and delivering solutions deployed across 100K+ devices and 5,000+ active client vehicles. Defined by a systematic approach to failure analysis: using model breakdowns as a structured roadmap to drive precision improvements and ensure reliability in safety-critical environments."
   
   [params.contact]
     email = "snishanth512@gmail.com"
