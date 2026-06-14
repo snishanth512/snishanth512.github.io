@@ -134,14 +134,14 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT", "page", "sect
     doi = "10.1109/I4Tech55392.2022.9952758"
 
   [[params.projects]]
-    title = "edge-image-embed"
+    title = "Edge Image Embedding Toolkit"
     url = "https://github.com/snishanth512/edge-image-embed"
     status = "Ongoing"
     desc = "An optimized, structured toolkit for generating image embeddings on resource-constrained edge hardware. Features modular pipelines for model fine-tuning (Hugging Face), lightweight runtime inference registries (MobileNetV3), performance evaluation benchmarking, and target deployment conversions (ARM, OpenVINO, Docker)."
     tags = ["Edge AI", "Computer Vision", "PyTorch", "Docker", "OpenVINO"]
 
   [[params.projects]]
-    title = "ids_bm"
+    title = "Bluetooth Mesh Intrusion Detection System"
     url = "https://github.com/snishanth512/ids_bm"
     desc = "Official implementation code for the paper \"Intrusion Detection System for Bluetooth Mesh Networks using Machine Learning\". Features supervised machine learning classifiers optimized for IoT-based intrusion detection security."
     tags = ["Machine Learning", "IoT Security", "Bluetooth Mesh", "Python"]
