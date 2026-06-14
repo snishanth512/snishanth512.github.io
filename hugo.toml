@@ -7,7 +7,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT", "page", "sect
 
 [params]
   name = "Nishanth Sivanandam"
-  subtitle = "Machine Learning Scientist | Edge AI & Safety-Critical Vision Systems"
+  subtitle = "Machine Learning Scientist | Edge AI & Computer Vision Systems"
   about = "Machine Learning Scientist at the intersection of applied research and production systems. Combines a foundation in embedded firmware engineering with specialized ML research, offering a full-stack perspective on AI development from sensor-level data to fleet-scale model deployment. Experienced in implementing Computer Vision and Vision-Language Model (VLM) systems end-to-end, with focused emphasis on systematic failure analysis, ML model development and deployment, and safety-critical AI product delivery."
   
   [params.contact]
