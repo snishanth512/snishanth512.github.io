@@ -20,8 +20,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT", "page", "sect
     location = "Bengaluru, India"
     date = "July 2022 – Present"
     roles = [
-      { name = "Machine Learning Scientist", duration = "Aug 2025 – Present" },
-      { name = "Machine Learning Engineer", duration = "Jul 2022 – Jul 2025" }
+      { name = "Machine Learning Scientist" }
     ]
     bullets = [
       "Designed end-to-end driver behavior detection systems using VLMs and LLMs, achieving 90% zero-shot precision.",
